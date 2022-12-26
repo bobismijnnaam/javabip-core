@@ -18,8 +18,7 @@
  */
 package org.javabip.glue;
 
-import javax.xml.bind.annotation.XmlAttribute;
-
+import jakarta.xml.bind.annotation.XmlAttribute;
 import org.javabip.api.PortBase;
 
 /**

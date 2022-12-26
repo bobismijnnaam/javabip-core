@@ -9,7 +9,6 @@
 		<relativePath>../org.javabip.parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>org.javabip</groupId>
 	<artifactId>org.javabip.glue</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
@@ -40,13 +39,31 @@
 			<version>17-ea+11</version>
 		</dependency>
 
+		<dependency>
+			<groupId>jakarta.xml.bind</groupId>
+			<artifactId>jakarta.xml.bind-api</artifactId>
+			<version>4.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.sun.xml.bind</groupId>
+			<artifactId>jaxb-impl</artifactId>
+			<version>4.0.1</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!--<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.4.0-b180830.0359</version>
+		</dependency>-->
 	</dependencies>
 
 	<properties>
-		<osgi.private></osgi.private>
+		<osgi.private/>
 		<osgi.import>*</osgi.import>
 		<osgi.export>org.javabip.glue</osgi.export>
-		<osgi.dynamic.import></osgi.dynamic.import>
+		<osgi.dynamic.import/>
 	</properties>
 
 	<build>
@@ -55,8 +72,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 

@@ -18,10 +18,9 @@
  */
 package org.javabip.glue;
 
+import jakarta.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.xml.bind.annotation.XmlElement;
 
 /**
  * Helper class used by XmlGenericListAdapter.

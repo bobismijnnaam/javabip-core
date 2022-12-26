@@ -8,6 +8,11 @@
 
   <name>BIP :: Core </name>
 
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
   <description>It contains all core packages/functionality of BIP project.</description>
   
 

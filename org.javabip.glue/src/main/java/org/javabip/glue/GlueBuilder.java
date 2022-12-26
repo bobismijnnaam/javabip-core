@@ -18,17 +18,35 @@
  */
 package org.javabip.glue;
 
-import org.javabip.annotations.ComponentType;
-import org.javabip.api.BIPGlue;
-import org.javabip.api.PortBase;
+// TODO (RR): Old:
+// import org.javabip.annotations.ComponentType;
+// import org.javabip.api.BIPGlue;
+// import org.javabip.api.PortBase;
+// 
+// import javax.xml.bind.JAXBContext;
+// import javax.xml.bind.JAXBException;
+// import javax.xml.bind.Unmarshaller;
+// import java.io.InputStream;
+// import java.io.InputStreamReader;
+// import java.lang.annotation.Annotation;
+// import java.util.*;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Unmarshaller;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.lang.annotation.Annotation;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import jakarta.xml.bind.JAXBContext;
+import jakarta.xml.bind.JAXBException;
+import jakarta.xml.bind.Unmarshaller;
+import org.javabip.annotations.ComponentType;
+import org.javabip.api.BIPGlue;
+import org.javabip.api.PortBase;
 
 /**
  * Provides functionality to build BIP Glue.

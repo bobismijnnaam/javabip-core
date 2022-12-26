@@ -19,9 +19,8 @@
 
 package org.javabip.executor;
 
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlTransient;
-
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlTransient;
 import org.javabip.api.BIPComponent;
 import org.javabip.api.ComponentProvider;
 import org.javabip.api.Port;

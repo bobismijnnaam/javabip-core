@@ -26,7 +26,6 @@
 		<relativePath>../org.javabip.parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>org.javabip</groupId>
 	<artifactId>org.javabip.api</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
@@ -37,10 +36,10 @@
 	<packaging>bundle</packaging>
 	
 	<properties>
-		<osgi.private></osgi.private>
-		<osgi.import></osgi.import>
+		<osgi.private/>
+		<osgi.import/>
 		<osgi.export>*</osgi.export>
-		<osgi.dynamic.import></osgi.dynamic.import>
+		<osgi.dynamic.import/>
 	</properties>
 
 	<build>
@@ -68,8 +67,8 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>8</source>
-					<target>8</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
 		</plugins>

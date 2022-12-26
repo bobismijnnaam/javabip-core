@@ -9,7 +9,6 @@
 		<relativePath>../org.javabip.parent/pom.xml</relativePath>
 	</parent>
 
-	<groupId>org.javabip</groupId>
 	<artifactId>org.javabip.spec.examples</artifactId>
 	<version>0.1.0-SNAPSHOT</version>
 
@@ -20,11 +19,11 @@
 	<packaging>bundle</packaging>
 
 	<properties>
-		<osgi.private></osgi.private>
+		<osgi.private/>
 		<osgi.import>*</osgi.import>
 		<osgi.export>org.javabip.spec, org.javabip.spec.hanoi, org.javabip.spec.diningphilosophers, org.javabip.spec.seal</osgi.export>
-		<osgi.dynamic.import></osgi.dynamic.import>
-		<osgi.bundles></osgi.bundles>
+		<osgi.dynamic.import/>
+		<osgi.bundles/>
 	</properties>
 
 	<dependencies>
@@ -122,8 +121,8 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>11</source>
+					<target>11</target>
 				</configuration>
 			</plugin>
             <plugin>

@@ -18,10 +18,11 @@
  */
 package org.javabip.glue;
 
+import jakarta.xml.bind.annotation.adapters.XmlAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.xml.bind.annotation.adapters.XmlAdapter;
 
 /**
  * Helper class needed by JAXB to transform BIP glue java object into xml file. It is used for implementing require

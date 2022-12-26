@@ -21,10 +21,8 @@ package org.javabip.glue;
 
 import java.util.ArrayList;
 import java.util.Collection;
-
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlElementWrapper;
 import org.javabip.api.Accept;
 import org.javabip.api.PortBase;
 
