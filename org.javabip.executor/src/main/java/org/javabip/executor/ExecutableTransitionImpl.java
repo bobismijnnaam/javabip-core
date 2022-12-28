@@ -80,12 +80,12 @@ class ExecutableTransitionImpl extends TransitionImpl implements ExecutableTrans
 		return this.guard;
 	}
 
-	public String pre() {
-		return this.pre;
+	public String requires() {
+		return this.requires;
 	}
 
-	public String post() {
-		return this.post;
+	public String ensures() {
+		return this.ensures;
 	}
 
 	public GuardTreeNode guardTree() {

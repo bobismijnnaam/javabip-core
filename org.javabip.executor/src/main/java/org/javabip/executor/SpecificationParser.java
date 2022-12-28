@@ -227,7 +227,7 @@ public abstract class SpecificationParser implements ComponentProvider {
                                         BehaviourBuilder builder) {
 
 		builder.addTransitionAndStates(transitionAnnotation.name(), transitionAnnotation.source(),
-                transitionAnnotation.target(), transitionAnnotation.guard(), transitionAnnotation.pre(), transitionAnnotation.post(), method);
+                transitionAnnotation.target(), transitionAnnotation.guard(), transitionAnnotation.requires(), transitionAnnotation.ensures(), method);
 
     }
 

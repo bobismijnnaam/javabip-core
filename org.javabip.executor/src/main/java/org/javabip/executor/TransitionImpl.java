@@ -42,8 +42,8 @@ class TransitionImpl {
 	protected String target;
 	// Empty string represents that there is no guard (pre- or post-condition) associated to this transition.
 	protected String guard;
-	protected String pre;
-	protected String post;
+	protected String requires;
+	protected String ensures;
 	protected Method method;
 	protected MethodHandle methodHandle;
 	protected Iterable<Data<?>> dataRequired;
@@ -66,21 +66,21 @@ class TransitionImpl {
 	 * @param dataRequired
 	 *            a list of data items that are required by the transition, parameters in the method signature.
 	 */
-	public TransitionImpl(String name, String source, String target, String guard, String pre, String post, Method method,
+	public TransitionImpl(String name, String source, String target, String guard, String requires, String ensures, Method method,
 			Iterable<Data<?>> dataRequired) {
 		this.name = name;
 		this.source = source;
 		this.target = target;
 		this.guard = guard == null? "" : guard;
-		this.pre = pre == null? "" : pre;
-		this.post = post == null? "" : post;
+		this.requires = requires == null? "" : requires;
+		this.ensures = ensures == null? "" : ensures;
 		this.method = method;
 		this.methodHandle = getMethodHandleForTransition();
 		this.dataRequired = dataRequired;
 	}
 
 	public TransitionImpl(TransitionImpl transition) {
-		this(transition.name, transition.source, transition.target, transition.guard, transition.pre, transition.post, transition.method,
+		this(transition.name, transition.source, transition.target, transition.guard, transition.requires, transition.ensures, transition.method,
 				transition.dataRequired);
 	}
 
@@ -116,11 +116,11 @@ class TransitionImpl {
 		if (this == o) return true;
 		if (!(o instanceof TransitionImpl)) return false;
 		TransitionImpl that = (TransitionImpl) o;
-		return name.equals(that.name) && source.equals(that.source) && target.equals(that.target) && Objects.equals(guard, that.guard) && Objects.equals(pre, that.pre) && Objects.equals(post, that.post) && Objects.equals(method, that.method);
+		return name.equals(that.name) && source.equals(that.source) && target.equals(that.target) && Objects.equals(guard, that.guard) && Objects.equals(requires, that.requires) && Objects.equals(ensures, that.ensures) && Objects.equals(method, that.method);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, source, target, guard, pre, post, method);
+		return Objects.hash(name, source, target, guard, requires, ensures, method);
 	}
 }

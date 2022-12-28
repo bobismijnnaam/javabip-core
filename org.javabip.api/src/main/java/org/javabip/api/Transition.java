@@ -38,14 +38,14 @@ public interface Transition {
 	 *
 	 * @return the pre expression.
 	 */
-	public String pre();
+	public String requires();
 
 	/**
 	 * It gets the string containing the post expression of the transition.
 	 *
 	 * @return the post expression.
 	 */
-	public String post();
+	public String ensures();
 
 	/**
 	 * It returns the name of transition.
