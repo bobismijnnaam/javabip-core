@@ -22,6 +22,7 @@ package org.javabip.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Repeatable;
 
 import org.javabip.api.PortType;
 
@@ -31,6 +32,7 @@ import org.javabip.api.PortType;
  * @author Alina Zolotukhina
  */
 @Retention(RetentionPolicy.RUNTIME)
+@Repeatable(Ports.class)
 public @interface Port {
 
 	/**
