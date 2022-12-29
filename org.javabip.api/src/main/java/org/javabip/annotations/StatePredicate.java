@@ -22,11 +22,13 @@ package org.javabip.annotations;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Repeatable;
 
 /**
  * A state predicate annotation
  */
 @Retention(RetentionPolicy.RUNTIME)
+@Repeatable(StatePredicates.class)
 public @interface StatePredicate {
 
 	/**
