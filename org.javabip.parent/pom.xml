@@ -227,11 +227,11 @@
 			<version>${org.javabip.engine.core.version}</version>
 		</dependency>
 
-	  <dependency>
+	 <!-- <dependency>
 		  <groupId>org.javabip</groupId>
 		  <artifactId>org.javabip.engine.factory</artifactId>
 		  <version>${org.javabip.engine.factory.version}</version>
-	  </dependency>
+	 </dependency> -->
 
     </dependencies>
   </dependencyManagement>
