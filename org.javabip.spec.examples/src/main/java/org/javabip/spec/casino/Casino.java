@@ -57,8 +57,8 @@ public class Casino {
 
     // Remove money from pot
     @Transitions({
-            @Transition(name = REMOVE_FROM_POT, source = IDLE, target = IDLE, guard = IS_OPERATOR, pre = "bet <= pot", post = "pot >= 0"),
-            @Transition(name = REMOVE_FROM_POT, source = GAME_AVAILABLE, target = GAME_AVAILABLE, guard = IS_OPERATOR, pre = "bet <= pot", post = "pot >= 0"),
+            @Transition(name = REMOVE_FROM_POT, source = IDLE, target = IDLE, guard = IS_OPERATOR, requires = "bet <= pot", ensures = "pot >= 0"),
+            @Transition(name = REMOVE_FROM_POT, source = GAME_AVAILABLE, target = GAME_AVAILABLE, guard = IS_OPERATOR, requires = "bet <= pot", ensures = "pot >= 0"),
     })
     public void removeFromPot(@Data(name = OPERATOR) Integer sender, @Data(name = INCOMING_FUNDS) Integer funds) {
         pot = pot - funds;
@@ -68,14 +68,14 @@ public class Casino {
     }
 
     // Operator opens the game
-    @Transition(name = CREATE_GAME, source = IDLE, target = GAME_AVAILABLE, guard = IS_OPERATOR, post = "secret != null")
+    @Transition(name = CREATE_GAME, source = IDLE, target = GAME_AVAILABLE, guard = IS_OPERATOR, ensures = "secret != null")
     public void createGame(@Data(name = OPERATOR) Integer sender) {
         secret = new Integer ((int) (Math.random() * 100));
         System.out.println("CASINO" + id + ": GAME CREATED");
     }
 
     // Operator receives a bet
-    @Transition(name = RECEIVE_BET, source = GAME_AVAILABLE, target = BET_PLACED, guard = IS_NOT_OPERATOR, pre = "bet <= pot", post = "bet >= 0 && guess != null")
+    @Transition(name = RECEIVE_BET, source = GAME_AVAILABLE, target = BET_PLACED, guard = IS_NOT_OPERATOR, requires = "bet <= pot", ensures = "bet >= 0 && guess != null")
     public void receiveBet(@Data(name = PLAYER) Integer sender,
                            @Data(name = INCOMING_GUESS) Coin guess, @Data(name = INCOMING_BET) Integer bet) {
         player = sender;

@@ -37,7 +37,7 @@ public class ProcessSpec {
 
 
     @Transitions({
-        @Transition(name = SEND, source = INITIAL, target = SENT, pre = "isLeader == true", post = "isActive == false"),
+        @Transition(name = SEND, source = INITIAL, target = SENT, requires = "isLeader == true", ensures = "isActive == false"),
         @Transition(name = SEND, source = RECEIVED, target = SENT, guard = GD_NOT_ELECTED),
         @Transition(name = SEND_DONE, source = RECEIVED, target = DONE, guard = GD_ELECTED)
     })
